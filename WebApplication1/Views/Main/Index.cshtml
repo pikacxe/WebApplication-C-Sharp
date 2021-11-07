@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication1.Models.Dete>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datumRodjenja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imeOca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imeMajke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Slika)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datumRodjenja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imeOca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imeMajke)
+        </td>
+        <td>
+           <img  src="@Url.Content(item.Slika)" alt="Nema slike" height="100" width="200"/>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

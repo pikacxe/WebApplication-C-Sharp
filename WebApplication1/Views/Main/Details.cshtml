@@ -1,0 +1,68 @@
+﻿@model WebApplication1.Models.Dete
+
+<div>
+    <h4>Dete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumRodjenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imeOca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imeOca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imeMajke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imeMajke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slika)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.Slika)" alt="Nema slike" height="100" width="200" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
